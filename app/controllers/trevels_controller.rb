@@ -1,0 +1,2 @@
+class TrevelsController < ApplicationController
+end
