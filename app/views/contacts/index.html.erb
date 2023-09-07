@@ -1,2 +1,26 @@
+<%= render 'layouts/header' %>
+
+
 <h1>Contacts</h1>
  <%= link_to 'Contact Us', new_contact_form_path %>
+
+
+<script type="text/javascript">
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('site-header');
+      header.classList.toggle('sticky-header', window.scrollY > 0);
+    });
+
+    function toggleMenu() {
+      console.log('toggleMenu called');
+      const menuToggle = document.getElementById('menuToggle');
+      const navigation = document.getElementById('navigation');
+      menuToggle.classList.toggle('menuToggleActive');
+      navigation.classList.toggle('menuToggleActive');
+    }
+  </script>
+
+
+
+
+
