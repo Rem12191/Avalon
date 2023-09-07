@@ -1,15 +1,353 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap'); 
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+ p { 
+    font-weight: 300;
+    color: #111;
+}
+
+body {
+   min-height: 1000px;
+}
+
+
+
+ header {  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+ header.sticky-header { 
+   background: #fff;
+   padding: 10px 100px;      
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+header .logo { 
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+ header.sticky-header .logo { 
+   color: #111;
+ } 
+ header .logo span { 
+  color: #ff0157;
+}
+header .navigation { 
+   position: relative;
+   display: flex;
+}
+header .navigation li {
+   list-style: none;
+   margin-left: 30px;
+}
+header .navigation li .nav-link {
+   text-decoration: none;
+   color: #fff;
+   font-weight: 300;
+}
+header.sticky-header .navigation li .nav-link{
+   color: #111;
+}
+header .navigation li .nav-link:hover {
+   color: #ff0157;
+}
+.banner {
+     position: relative;
+     width: 100%;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: #1D4286;
+     background-size: cover;
+ }
+ 
+ .logo-container {
+  position: absolute;
+  top: 100px; /* Adjust this value to set the desired distance below the header */
+  left: 0;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.company-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.banner .content {
+     max-width: 900px;
+     text-align: center;
+ }
+ 
+.banner .content h2 {
+     font-size: 5em;
+     color: #fff;
+ }
+ 
+ .banner .content p {
+     font-size: 1em;
+     color: #fff;
+ }
+ 
+.btn {
+     font-size: 1em;
+     color: #fff;
+     background: #ff0157;
+     display: inline-block;
+     padding: 10px 30px;
+     text-decoration: none;
+     margin-top: 20px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     transition: 0.5s;
+ }
+ 
+.btn:hover {
+     letter-spacing: 4px;
+ }
+ 
+ section {
+    padding: 100px;
+}
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.row .co150 {
+    position: relative;
+    width: 48%;
+}
+.tittleText{
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+.tittleText span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.row .co150 .imgBx {
+    position: relative;
+    width: 100%;
+    min-height : 300px;
+    /*height: 100%;*/
+}
+.row .co150 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}   
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menu .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px
+}
+.menu .content .box {
+    width: 340px;
+    margin: 20px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+.menu .content .box .imgBx {
+   position: relative;
+   width: 100%;
+   height: 300px;
+}
+.menu .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menu .content .box .text {
+   padding: 15px 0 5px;
+}
+.menu .content .box .text h3 {
+    font-weight: 400;
+    color: #111;
+}
+
+.soshial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .tittleMedia {
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+  }
+  
+  .tittleMedia p {
+    font-size: 2em;
+    color: #111;
+  }
+  
+  .tittleMedia span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+  .soshial .media {
+    margin-bottom: 20px; /* Increase or decrease this margin to control spacing */
+  }
+  .social-media-links {
+    margin-top: 60px;
+  }
+  
+  .social-media-links a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-media-links img {
+    width: 160px; /* Adjust the size as needed */
+    height: auto;
+  }
+
+  .soshial .box {
+    margin-top: 10px; /* Increase or decrease this margin as needed to control spacing */
+  }
+  
+  .soshial .imgBx {
+    margin-top: 5px; /* Adjust the margin-top value to move the image closer or further away */
+  }
+
+
+.copyrightText {
+    padding: 8px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.copyrightText p {
+    color: #333;
+} 
+.copyrightText a {
+    color: #ff0157;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+@media (max-width: 991px)
+ {
+    header {
+         padding: 10px 20px;
+    }
+    header.sticky-header {
+         padding: 10px 20px;
+     }
+    header .navigation {
+        display: none;
+    }
+    header .navigation.menuToggleActive {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    header .navigation li {
+        margin-left: 0;
+    }
+    header .navigation li .nav-link {
+        color: #111;
+        font-size: 1.6em;
+    }
+    .menuToggle {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      background: url(https://t3.ftcdn.net/jpg/01/09/45/80/360_F_109458015_QsWmchlzuwCZPqIUWR7HcTDsbbptejRv.jpg);
+      background-size: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+  }
+  .menuToggle.menuToggleActive {
+      background: url(https://cdn.vectorstock.com/i/preview-lt/94/67/red-cross-vector-5779467.webp);
+      background-size: 25px;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+  header.sticky .menuToggle {
+      filter: invert();
+  }
+  section {
+      padding: 20px;
+  }
+  .banner .content h2 {
+      font-size: 3em;
+      color: #fff;
+  }
+  .menu .content {
+   margin-top: 20px
+}
+.menu .content .box {
+   margin: 10px;     
+}
+.menu .content .box .imgBx {
+   height: 260px;
+}
+.title {
+   text-align: center;
+}
+.tittleText {
+   
+   font-size: 1.8em;
+   line-height: 1.5em;
+   margin-bottom: 15px;
+   font-weight: 300;
+}
+
+}
+@media (max-width: 480px) {
+    .banner .content h2 {
+        font-size: 2.2em;
+        color: #fff;
+    }
+}

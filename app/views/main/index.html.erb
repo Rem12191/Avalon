@@ -1,1 +1,101 @@
-<h1>Main page</h1>
+ <header id="site-header">
+       <%= link_to 'Avalon Adventures<span>.</span>'.html_safe, root_path, class: 'logo' %>
+       <div class="menuToggle" id="menuToggle" onclick="toggleMenu()"></div>
+        <ul class="navigation" id="navigation">
+             <li><%= link_to 'Trevels', trevels_path, class: 'nav-link' %></li>
+            <li><%= link_to 'About', about_path, class: 'nav-link' %></li>
+            <li><%= link_to 'Contacts', contacts_path, class: 'nav-link' %></li>
+            <li><%= link_to 'Registration', registration_path, class: 'nav-link' %></li>
+        </ul>
+    </header> 
+    <section class="banner" id="banner">
+  <div class="content">
+    <h2 class="tittleText">Avalon<span>A</span>dventures</h2>
+    <p>Craftin' Everlastin' Memories on the Avalon, B'y! Together, We Forge Timeless Moments, Proper!</p>
+    <a href="#" class="btn">Booking</a>
+  </div>
+  <div class="logo-container">
+    <img src="\images\Avalon-Adventures.png" alt="Company Logo" class="company-logo">
+  </div>
+</section>
+    <section class="menu" id="menu">
+        <div class="title">
+            <h2 class="tittleText">Our<span>T</span>ravels</h2>
+            <p>Step into Avalon Adventures, your ultimate gateway to unforgettable family experiences on Newfoundland's 
+              captivating Avalon Peninsula! Our team of ardent travel<br> aficionados is dedicated to sharing the awe-inspiring 
+              charm and natural wonders of this remarkable region with families, whether they hail from nearby or afar.
+            </p>
+            
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.pexels.com/photos/302271/pexels-photo-302271.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                </div>
+                <div class="text">
+                    <h3>Whale Watching</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.pexels.com/photos/1796698/pexels-photo-1796698.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                </div>
+                <div class="text">
+                    <h3>Brewery Crawl</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="data:image/jpeg;base64,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">
+                </div>
+                <div class="text">
+                    <h3>Family Ferryland Adventure</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbP7wvQaDsxrCKRJuaZnA6uhquXIl6MH558A&usqp=CAU">
+                </div>
+                <div class="text">
+                    <h3>East Coast Hiking</h3>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <a href="#" class="btn">To Travels!</a>
+        </div>
+    <section class="soshial" id="soshial">
+  <div class="media">
+    <!-- Content for the "media" div goes here -->
+    <h2 class="tittleMedia">Find us<span>A</span>nd join!</h2>
+    <p>Travels are already waiting for you!</p>
+  </div>
+  <div class="social-media-links">
+    <a href="https://www.facebook.com/YourFacebookPage" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/372/372387.png" alt="Facebook"></a>
+    <a href="https://twitter.com/YourTwitterProfile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/372/372412.png" alt="Twitter"></a>
+    <a href="https://www.instagram.com/YourInstagramProfile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/372/372395.png" alt="Instagram"></a>
+    <a href="https://Youtube.com/YourYoutubeProfile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/372/372420.png" alt="YouTube"></a>
+  </div>
+  <div class="box">
+    <div class="imgBx">
+      <img src="\images\Seagull1111 - instasize (1)"
+  </div>
+</section>
+    <div class="copyrightText">
+        <p>Copyright 2023 <a href="#"> Avalon Adventures </a> All Right Reserved</p>
+    </div>
+
+  <script type="text/javascript">
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('site-header');
+      header.classList.toggle('sticky-header', window.scrollY > 0);
+    });
+
+    function toggleMenu() {
+      console.log('toggleMenu called');
+      const menuToggle = document.getElementById('menuToggle');
+      const navigation = document.getElementById('navigation');
+      menuToggle.classList.toggle('menuToggleActive');
+      navigation.classList.toggle('menuToggleActive');
+    }
+  </script>

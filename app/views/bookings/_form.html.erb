@@ -1,0 +1,18 @@
+<%= form_with model: @booking, url: bookings_create_path, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :email %>
+  <%= form.email_field :email %>
+
+  <%= form.label :phone %>
+  <%= form.text_field :phone %>
+
+  <%= form.label :travel_date %>
+  <%= form.date_field :travel_date %>
+
+  <%= form.label :message %>
+  <%= form.text_area :message %>
+
+  <%= form.submit 'Submit Booking' %>
+<% end %>
