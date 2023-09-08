@@ -1,18 +1,24 @@
 <%= form_with model: @booking, url: bookings_create_path, local: true do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
+  <h2 class="form-heading">Booking trevel</h2>
+  <label class="form-label" for="booking_name">Name:</label>
+  <input class="form-input" type="text" id="booking_name" name="booking[name]" required>
 
-  <%= form.label :email %>
-  <%= form.email_field :email %>
+  <label class="form-label" for="booking_email">Email:</label>
+  <input class="form-input" type="email" id="booking_email" name="booking[email]" required>
 
-  <%= form.label :phone %>
-  <%= form.text_field :phone %>
+  <label class="form-label" for="booking_phone">Phone:</label>
+  <input class="form-input" type="tel" id="booking_phone" name="booking[phone]" required>
 
-  <%= form.label :travel_date %>
-  <%= form.date_field :travel_date %>
+  <label class="form-label" for="booking_travel_date">Travel date:</label>
+  <input class="form-input" type="date" id="booking_travel_date" name="booking[travel_date]" required>
 
-  <%= form.label :message %>
-  <%= form.text_area :message %>
+  <label class="form-label" for="booking_message">Message:</label>
+  <textarea class="form-textarea" id="booking_message" name="booking[message]" rows="4" required></textarea>
 
-  <%= form.submit 'Submit Booking' %>
+  <input class="form-submit" type="submit" value="Submit">
 <% end %>
+
+
+
+
+

@@ -1,3 +1,113 @@
-<h1>Contact Us</h1>
+<style>
+  .banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0097B2;
+    background-size: cover;
+    overflow: hidden;
+  }
 
-<%= render 'form' %>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Style the form container */
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  /* Style form headings */
+  .form-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* Style form labels */
+  .form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  /* Style form input fields */
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Style form textarea */
+  .form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Style form submit button */
+  .form-submit {
+    background-color: #ff0157;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Style form submit button on hover */
+  .form-submit:hover {
+    background-color: #0056b3;
+  }
+
+  /* Style form error messages */
+  .form-error {
+    color: red;
+    font-size: 14px;
+  }
+
+  /* Other CSS styles can go here */
+</style>
+
+<%= render 'layouts/header' %>
+
+<section class="banner" id="banner">
+  <%= render 'form' %>
+</section>
+
+<div class="copyrightText">
+  <p>Copyright 2023 <a href="#">Avalon Adventures</a> All Right Reserved</p>
+</div>
+
+<script type="text/javascript">
+  window.addEventListener('scroll', function () {
+    const header = document.getElementById('site-header');
+    header.classList.toggle('sticky-header', window.scrollY > 0);
+  });
+
+  function toggleMenu() {
+    console.log('toggleMenu called');
+    const menuToggle = document.getElementById('menuToggle');
+    const navigation = document.getElementById('navigation');
+    menuToggle.classList.toggle('menuToggleActive');
+    navigation.classList.toggle('menuToggleActive');
+  }
+</script>
+
+
+
+
+

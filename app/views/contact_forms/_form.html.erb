@@ -1,15 +1,15 @@
-<%= form_with model: @contact_form, url: contact_forms_path do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
+<%= form_with model: @contact, url: contact_forms_path do |form| %>
+  <label class="form-label" for="contact_name">Name:</label>
+  <%= form.text_field :name, class: "form-input", id: "contact_name" %>
 
-  <%= form.label :phone %>
-  <%= form.text_field :phone %>
+  <label class="form-label" for="contact_phone">Phone:</label>
+  <%= form.text_field :phone, class: "form-input", id: "contact_phone" %>
 
-  <%= form.label :email %>
-  <%= form.email_field :email %>
+  <label class="form-label" for="contact_email">Email:</label>
+  <%= form.email_field :email, class: "form-input", id: "contact_email" %>
 
-  <%= form.label :question %>
-  <%= form.text_area :question %>
+  <label class="form-label" for="contact_question">Question:</label>
+  <%= form.text_area :question, class: "form-textarea", id: "contact_question" %>
 
-  <%= form.submit 'Submit' %>
+  <%= form.submit 'Submit', class: "form-submit" %>
 <% end %>
