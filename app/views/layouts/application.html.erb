@@ -12,11 +12,19 @@
     <%= javascript_importmap_tags %>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap">
+    <%= stylesheet_link_tag 'flash_messages' %>
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+  <div id="flash-messages">
+    <% flash.each do |type, message| %>
+      <div class="alert alert-<%= type %>">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+  <%= yield %>
+</body>
 </html>
 
 

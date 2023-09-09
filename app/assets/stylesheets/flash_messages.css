@@ -1,0 +1,38 @@
+/* Style for flash messages */
+.alert {
+  padding: 10px 20px; /* Increase padding for a bigger message */
+  font-size: 16px; /* Increase font size */
+  position: fixed;
+  z-index: 11000;
+  top: 300px;
+  right: 850px;
+}
+
+/* Success flash message */
+.alert-success {
+  background-color: #d4edda;
+  border: 2px solid #c3e6cb; /* Add a border */
+  color: #28a745; /* Change text color for success message */
+  font-size: 20px; /* Increase font size for success message */
+}
+
+/* Error flash message */
+.alert-error {
+  background-color: #f8d7da;
+  border: 2px solid #f5c6cb; /* Add a border */
+  color: #721c24; /* Change text color for error message */
+  font-size: 20px; /* Increase font size for error message */
+}
+
+/* Warning flash message */
+.alert-warning {
+  background-color: #fff3cd;
+  border: 2px solid #ffeeba; /* Add a border */
+  color: #856404; /* Change text color for warning message */
+  font-size: 20px; /* Increase font size for warning message */
+}
+
+
+
+
+
